@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.blackflower.lastlabforfirstsemester;
 
 /**
@@ -9,5 +5,10 @@ package com.blackflower.lastlabforfirstsemester;
  * @author emirs
  */
 public class Test {
-    
+    public static void main(String[] args) {
+        Employee emp = new Employee();
+        Employee.Salary salary = emp.new Salary();
+        
+        Employee.Salary salary2 = emp.getSalary();
+    }
 }

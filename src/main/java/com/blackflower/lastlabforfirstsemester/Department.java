@@ -1,13 +1,46 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.blackflower.lastlabforfirstsemester;
+
+import java.util.ArrayList;
 
 /**
  *
  * @author emirs
  */
 public class Department {
+    String deptName;
+    static ArrayList<Employee> employees = new ArrayList<>();
     
+    static class EmployeeAdder{
+        void addEmployee(Employee emp, IPayment payment){
+            
+        }
+    }
+    
+    ArrayList<Employee> getEmployeeExeedingAdvance(){
+        ArrayList<Employee> employeeseExeedingAdvance = new ArrayList<>();
+        
+        for (Employee employee : employees) {
+            if (employee.getToatalSalary() < employee.getTotalAdvances()) {
+                employeeseExeedingAdvance.add(employee);
+            }
+        }
+        
+//        // Stream Solution
+//        employees.forEach((employee) -> {
+//            if (employee.getToatalSalary() < employee.getTotalAdvances()) {
+//                employeeseExeedingAdvance.add(employee);
+//            }
+//        });
+
+        return employeeseExeedingAdvance;
+    }
+    
+    void addPaymentToEmployee(IPayment payment, String firstName, String lastName){
+        for (Employee employee : employees) {
+            if (employee.name.equals(firstName) && employee.surname.equals(lastName)) {
+                employee.advances.add(payment);
+            }
+        }
+    }
+  
 }
